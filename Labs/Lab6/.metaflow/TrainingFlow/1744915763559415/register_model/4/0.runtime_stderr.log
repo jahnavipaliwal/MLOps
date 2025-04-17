@@ -1,7 +1,0 @@
-[MFLOG|0|2025-04-17T18:54:30.876005Z|runtime|8f3dc2b5-ff4a-45d6-abc8-7f09f55ea607]2025/04/17 11:54:30 INFO mlflow.tracking.fluent: Experiment with name 'Bagpack_Model_Training' does not exist. Creating a new experiment.
-[MFLOG|0|2025-04-17T18:54:32.526982Z|runtime|04d8a56a-d9d4-421b-9234-fff22a73bb78]2025/04/17 11:54:32 WARNING mlflow.models.model: Input example should be provided to infer model signature if the model signature is not provided when logging the model.
-[MFLOG|0|2025-04-17T18:54:32.538862Z|runtime|a9d08cd3-9f2a-450d-836b-920bda8d4b59]Successfully registered model 'BagpackBestModel'.
-[MFLOG|0|2025-04-17T18:54:32.556050Z|runtime|a18cd3b4-20c0-49bc-9b06-331b305ffca6]2025/04/17 11:54:32 INFO mlflow.store.model_registry.abstract_store: Waiting up to 300 seconds for model version to finish creation. Model name: BagpackBestModel, version 1
-[MFLOG|0|2025-04-17T18:54:32.560500Z|runtime|a04aaff7-671b-4034-9459-bd26d989137b]Created version '1' of model 'BagpackBestModel'.
-[MFLOG|0|2025-04-17T18:54:32.560580Z|runtime|f875cc38-5ad1-440d-8dcc-67e5ba672c98]2025/04/17 11:54:32 INFO mlflow.tracking._tracking_service.client: 🏃 View run amazing-donkey-302 at: http://127.0.0.1:5000/#/experiments/1/runs/781df1fc2d91488f8ee8f2e9450f3203.
-[MFLOG|0|2025-04-17T18:54:32.855796Z|runtime|fdb762ee-1de6-46b6-b151-66362d1ac8d6]2025/04/17 11:54:32 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1.
