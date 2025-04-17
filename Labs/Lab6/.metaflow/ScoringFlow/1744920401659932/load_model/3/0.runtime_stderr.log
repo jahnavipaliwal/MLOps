@@ -1,0 +1,85 @@
+[MFLOG|0|2025-04-17T20:06:45.137955Z|runtime|bcd4c7bb-e78b-4d81-85a5-c02abb0ae4e5]<flow ScoringFlow step load_model> failed:
+[MFLOG|0|2025-04-17T20:06:45.141140Z|runtime|68ff217b-5ab5-4e2a-9b72-1cd47a367432]    Internal error
+[MFLOG|0|2025-04-17T20:06:45.142048Z|runtime|a711cd77-8934-416f-b596-edc4bbc69826]Traceback (most recent call last):
+[MFLOG|0|2025-04-17T20:06:45.142118Z|runtime|7b2a4a91-4997-437b-a42f-1d2a1929d006]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/cli.py", line 611, in main
+[MFLOG|0|2025-04-17T20:06:45.142150Z|runtime|776ecc4f-5bcb-484a-b354-96939dd4e2e8]    start(auto_envvar_prefix="METAFLOW", obj=state)
+[MFLOG|0|2025-04-17T20:06:45.142180Z|runtime|685a17cd-850f-4cdc-96b9-6f5bab29e889]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 829, in __call__
+[MFLOG|0|2025-04-17T20:06:45.142219Z|runtime|83356d29-c946-4aa3-b7b4-f11cf3ca9c0e]    return self.main(args, kwargs)
+[MFLOG|0|2025-04-17T20:06:45.142241Z|runtime|7702aaed-6511-4f1c-91b7-4c60134149a3]           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:06:45.142263Z|runtime|5cd9e1ce-2f4b-41a3-9dc1-24ef9b2633f9]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 782, in main
+[MFLOG|0|2025-04-17T20:06:45.142283Z|runtime|2f5c4aa2-5812-41cc-b189-1fcc29e28d7d]    rv = self.invoke(ctx)
+[MFLOG|0|2025-04-17T20:06:45.142301Z|runtime|0eead34e-1156-4589-9068-f3cbbe74a716]         ^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:06:45.142320Z|runtime|9ad5c9af-c0f2-4233-8cd8-9ab998234543]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/cli_components/utils.py", line 69, in invoke
+[MFLOG|0|2025-04-17T20:06:45.142339Z|runtime|8d896638-3274-48f8-acd5-83642f19d079]    return _process_result(sub_ctx.command.invoke(sub_ctx))
+[MFLOG|0|2025-04-17T20:06:45.142357Z|runtime|d5a5d980-ff25-4f1a-bf62-720e567d8dcb]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:06:45.142376Z|runtime|d140b3a2-36ad-4a9b-89f2-0a87d5a3001f]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 1066, in invoke
+[MFLOG|0|2025-04-17T20:06:45.142395Z|runtime|df0946d3-4b6b-4994-a550-f5a9e135a36d]    return ctx.invoke(self.callback, ctx.params)
+[MFLOG|0|2025-04-17T20:06:45.261653Z|runtime|f448e40a-d7c4-40b6-b2c6-6d0e813fdc5a]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:06:45.261776Z|runtime|e7c15c6c-4992-406f-b1a6-adfb1414a721]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 610, in invoke
+[MFLOG|0|2025-04-17T20:06:45.261808Z|runtime|2858d848-cb6c-4fa2-80cb-cba6ce11f62e]    return callback(args, kwargs)
+[MFLOG|0|2025-04-17T20:06:45.261830Z|runtime|9c20eac9-5803-4f9c-a5e3-900fbdc6bdbe]           ^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:06:45.261850Z|runtime|ef477d99-a966-45a1-b09f-f025155ca473]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/tracing/__init__.py", line 27, in wrapper_func
+[MFLOG|0|2025-04-17T20:06:45.261870Z|runtime|c9e6de3c-2efa-4121-9ba6-0d77f3cfbd8a]    return func(args, kwargs)
+[MFLOG|0|2025-04-17T20:06:45.261887Z|runtime|15c32482-a0db-4e63-9484-a494e7a36682]           ^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:06:45.261906Z|runtime|0907e3cd-78d5-4c3e-a894-28fb4d870503]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/_vendor/click/decorators.py", line 21, in new_func
+[MFLOG|0|2025-04-17T20:06:45.261925Z|runtime|1057744e-a321-4bf6-9ee7-03c80cfde135]    return f(get_current_context(), args, kwargs)
+[MFLOG|0|2025-04-17T20:06:45.261944Z|runtime|6df1dca3-0a8e-42da-8fa1-2842f71b05d5]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:06:45.261962Z|runtime|cc1ea70e-1b74-4cad-9f5c-26e5ec568222]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/cli_components/step_cmd.py", line 167, in step
+[MFLOG|0|2025-04-17T20:06:45.261979Z|runtime|252406fd-f4d8-4b85-acb3-cee73539632b]    task.run_step(
+[MFLOG|0|2025-04-17T20:06:45.261997Z|runtime|9b0875c6-5d4c-47bc-9439-69a1a54b9028]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/task.py", line 672, in run_step
+[MFLOG|0|2025-04-17T20:06:45.262015Z|runtime|289ddae5-c676-42a2-84c4-49747a5d38fc]    self._exec_step_function(step_func)
+[MFLOG|0|2025-04-17T20:06:45.262033Z|runtime|2c000a3f-0fd5-4d24-ad76-940419f87025]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/task.py", line 62, in _exec_step_function
+[MFLOG|0|2025-04-17T20:06:45.262051Z|runtime|2a963dab-9b30-45fd-8496-cc5e464e0bf4]    step_function()
+[MFLOG|0|2025-04-17T20:06:45.262069Z|runtime|3f396afc-db2a-41d8-8318-956b7efb10fb]  File "/Users/jahnavipaliwal/Desktop/ML_Ops/MLOps/Labs/Lab6/src/scoring.py", line 22, in load_model
+[MFLOG|0|2025-04-17T20:06:45.262091Z|runtime|b92f8a54-baab-4f32-be8a-58fbbc08d159]    self.model = mlflow.sklearn.load_model(model_uri)
+[MFLOG|0|2025-04-17T20:06:45.262107Z|runtime|bf2a04b3-6472-4f20-ac30-cdd166780b29]                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:06:45.262124Z|runtime|fd4609ff-025a-4b16-ae7e-b3fea0a3dba6]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/mlflow/sklearn/__init__.py", line 632, in load_model
+[MFLOG|0|2025-04-17T20:06:45.262141Z|runtime|ca7f6e68-0238-4963-8b7a-64af4e6b497f]    local_model_path = _download_artifact_from_uri(artifact_uri=model_uri, output_path=dst_path)
+[MFLOG|0|2025-04-17T20:06:45.262159Z|runtime|7611304e-1400-4d7d-8479-8bdd0a0bc5d2]                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:06:45.262175Z|runtime|199b52a1-bad2-41f2-a96b-bf5eb09914bd]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/mlflow/tracking/artifact_utils.py", line 108, in _download_artifact_from_uri
+[MFLOG|0|2025-04-17T20:06:45.262214Z|runtime|85e6d016-15c6-4e7f-8ee8-29578a1b6176]    repo = get_artifact_repository(artifact_uri=root_uri)
+[MFLOG|0|2025-04-17T20:06:45.262235Z|runtime|8cf7aef2-6373-4b6e-a1e8-cf4f8aac0519]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:06:45.262266Z|runtime|dc2cb15e-8520-4ef9-95bb-72261471b98b]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/mlflow/store/artifact/artifact_repository_registry.py", line 133, in get_artifact_repository
+[MFLOG|0|2025-04-17T20:06:45.262285Z|runtime|85256cab-8942-44a3-a858-37f6f9383a7b]    return _artifact_repository_registry.get_artifact_repository(artifact_uri)
+[MFLOG|0|2025-04-17T20:06:45.262302Z|runtime|231300d6-e790-4a05-bb36-a7fb9aaa999e]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:06:45.262317Z|runtime|db24cb26-3a79-42ea-8c47-1c3337c55028]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/mlflow/store/artifact/artifact_repository_registry.py", line 78, in get_artifact_repository
+[MFLOG|0|2025-04-17T20:06:45.262340Z|runtime|0b7fc069-0ffa-433d-9977-35c2ee604d5e]    return repository(artifact_uri)
+[MFLOG|0|2025-04-17T20:06:45.262358Z|runtime|7d71c6f6-74df-40a0-a7e2-e0de191b5ca7]           ^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:06:45.262375Z|runtime|218d7f8e-ac63-4509-8cf8-082a935d70c1]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/mlflow/store/artifact/models_artifact_repo.py", line 59, in __init__
+[MFLOG|0|2025-04-17T20:06:45.262393Z|runtime|9c978b6f-8a93-4f3d-b6ef-67e9aaeeaf42]    ) = ModelsArtifactRepository._get_model_uri_infos(artifact_uri)
+[MFLOG|0|2025-04-17T20:06:45.262409Z|runtime|ac081d76-85dd-468c-8a89-f2e724958527]        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:06:45.262426Z|runtime|a467bfb3-ceaf-4561-8cfb-ba8ceda99114]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/mlflow/store/artifact/models_artifact_repo.py", line 93, in _get_model_uri_infos
+[MFLOG|0|2025-04-17T20:06:45.262448Z|runtime|ee8bf222-4b1d-488b-ad8b-e8ed0dca5ef5]    name, version = get_model_name_and_version(client, uri)
+[MFLOG|0|2025-04-17T20:06:45.262465Z|runtime|f8f14aee-6a17-4daf-8d51-6ad0cfa74e7a]                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:06:45.262482Z|runtime|a60660fc-6af8-4157-bc93-0005851a36a2]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/mlflow/store/artifact/utils/models.py", line 94, in get_model_name_and_version
+[MFLOG|0|2025-04-17T20:06:45.262500Z|runtime|ab0420be-9849-4324-902d-f6a0f9d289bb]    return model_name, str(_get_latest_model_version(client, model_name, model_stage))
+[MFLOG|0|2025-04-17T20:06:45.262517Z|runtime|cc956cd8-6d75-4999-a118-099acb24eb86]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:06:45.262534Z|runtime|d274d9cd-dcfc-4429-bcce-b85f1be9db72]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/mlflow/store/artifact/utils/models.py", line 32, in _get_latest_model_version
+[MFLOG|0|2025-04-17T20:06:45.262552Z|runtime|93254641-83c6-4496-bed8-3969cefb3144]    latest = client.get_latest_versions(name, None if stage is None else [stage])
+[MFLOG|0|2025-04-17T20:06:45.262570Z|runtime|feafeae3-97d3-4c0a-89a7-65fa9ef6fdc7]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:06:45.262587Z|runtime|9c09f092-b823-4798-818e-b9c934d40a7f]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/mlflow/utils/annotations.py", line 145, in deprecated_func
+[MFLOG|0|2025-04-17T20:06:45.262604Z|runtime|a043c74e-733d-45e8-b58a-5384333f2f38]    return func(args, kwargs)
+[MFLOG|0|2025-04-17T20:06:45.262623Z|runtime|624a6e6b-4fcf-4ef2-bb6f-a6248acdc580]           ^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:06:45.262640Z|runtime|a08c3879-714c-4a8d-b4ff-495f375269e8]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/mlflow/tracking/client.py", line 3468, in get_latest_versions
+[MFLOG|0|2025-04-17T20:06:45.262658Z|runtime|c54f8f82-3e1d-4a9f-8e6f-06e6c42fb0c5]    return self._get_registry_client().get_latest_versions(name, stages)
+[MFLOG|0|2025-04-17T20:06:45.262676Z|runtime|e7bb5e69-1edc-4c01-bd7f-f683d16e0a3b]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:06:45.262696Z|runtime|9ac1e4b0-5d05-46ee-ae99-0ac0d05956de]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/mlflow/tracking/_model_registry/client.py", line 152, in get_latest_versions
+[MFLOG|0|2025-04-17T20:06:45.262712Z|runtime|07b8e0df-2b00-4082-8f4a-3a9b1286f607]    return self.store.get_latest_versions(name, stages)
+[MFLOG|0|2025-04-17T20:06:45.262729Z|runtime|1f4a8e50-55ba-478e-a374-5a8c81a8d766]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:06:45.262746Z|runtime|f1048cc0-9bda-44be-8038-24bcd16add4c]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/mlflow/store/model_registry/rest_store.py", line 193, in get_latest_versions
+[MFLOG|0|2025-04-17T20:06:45.262763Z|runtime|a04e1686-d895-495e-8e63-391f8d835c19]    response_proto = self._call_endpoint(GetLatestVersions, req_body, call_all_endpoints=True)
+[MFLOG|0|2025-04-17T20:06:45.262779Z|runtime|6af11550-fbd7-4d89-b0a2-3c225359f86a]                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:06:45.262796Z|runtime|c8a6a70d-e1cb-44ae-910d-57f34d9475a5]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/mlflow/store/model_registry/base_rest_store.py", line 39, in _call_endpoint
+[MFLOG|0|2025-04-17T20:06:45.262816Z|runtime|a0c71e6c-e998-449a-9d85-f2ab6e0b8260]    return call_endpoints(
+[MFLOG|0|2025-04-17T20:06:45.262838Z|runtime|2d252068-fcd0-4473-9dbf-3aaf6b024ccb]           ^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:06:45.262857Z|runtime|4cb38c76-f71a-4bf2-9285-0ee6a58daa34]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/mlflow/utils/rest_utils.py", line 373, in call_endpoints
+[MFLOG|0|2025-04-17T20:06:45.262874Z|runtime|b9292978-dd96-41c1-a0ef-7194f93d1dbc]    return call_endpoint(
+[MFLOG|0|2025-04-17T20:06:45.262893Z|runtime|28c3a040-d49c-4380-909a-3f756d2f64c8]           ^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:06:45.262911Z|runtime|8a611b52-60a6-4071-ab10-cf1b1603eef6]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/mlflow/utils/rest_utils.py", line 362, in call_endpoint
+[MFLOG|0|2025-04-17T20:06:45.262928Z|runtime|53df5ede-524e-4a77-8185-dd31ee737f42]    response = verify_rest_response(response, endpoint)
+[MFLOG|0|2025-04-17T20:06:45.262947Z|runtime|cefa717b-4345-461c-8b93-cce3baf9aebc]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:06:45.262964Z|runtime|31ab28fc-c855-45a7-a76b-80287cae922b]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/mlflow/utils/rest_utils.py", line 238, in verify_rest_response
+[MFLOG|0|2025-04-17T20:06:45.262980Z|runtime|5ad1d78b-4295-461c-8253-519357a2e07f]    raise MlflowException(
+[MFLOG|0|2025-04-17T20:06:45.262998Z|runtime|41379c00-1a35-41dc-9be2-6c9c55d17960]mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/registered-models/get-latest-versions failed with error code 403 != 200. Response body: ''
+[MFLOG|0|2025-04-17T20:06:45.263016Z|runtime|3a53e3a9-66cd-46a7-a5aa-8effc6b3f276]
+[MFLOG|0|2025-04-17T20:06:45.263334Z|runtime|14164fa6-3e59-4f64-8f6b-8e380ad12683]Task failed.

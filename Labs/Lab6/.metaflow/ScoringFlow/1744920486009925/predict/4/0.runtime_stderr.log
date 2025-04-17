@@ -1,0 +1,57 @@
+[MFLOG|0|2025-04-17T20:08:10.678833Z|runtime|b5c213a5-3a3e-427d-98ce-f815effcb721]<flow ScoringFlow step predict> failed:
+[MFLOG|0|2025-04-17T20:08:10.704296Z|runtime|91c0ee6b-63bd-448c-bf7d-6a80b4f99c5c]    Internal error
+[MFLOG|0|2025-04-17T20:08:10.705223Z|runtime|816077dd-386d-4088-b291-7cbbcfa4422c]Traceback (most recent call last):
+[MFLOG|0|2025-04-17T20:08:10.705274Z|runtime|93adcb87-6b42-405d-9448-8dad2aa6eeed]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/cli.py", line 611, in main
+[MFLOG|0|2025-04-17T20:08:10.705299Z|runtime|0f5826da-cf29-40b4-8d84-554c062172c9]    start(auto_envvar_prefix="METAFLOW", obj=state)
+[MFLOG|0|2025-04-17T20:08:10.705326Z|runtime|a8ee4e2b-8b2b-4216-9a91-d34cbc17966b]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 829, in __call__
+[MFLOG|0|2025-04-17T20:08:10.705355Z|runtime|ce546ce4-235d-47d9-8de5-d1ac57d73733]    return self.main(args, kwargs)
+[MFLOG|0|2025-04-17T20:08:10.813855Z|runtime|753104ef-18a4-4d5f-8529-bc39060901e2]           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:08:10.813964Z|runtime|313ead36-c62e-45ab-8306-270720b09431]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 782, in main
+[MFLOG|0|2025-04-17T20:08:10.813995Z|runtime|0013f1bd-6150-4829-93ef-70f53fd46b40]    rv = self.invoke(ctx)
+[MFLOG|0|2025-04-17T20:08:10.814016Z|runtime|911bba34-c920-47bb-aef6-6d23fa932cb9]         ^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:08:10.814044Z|runtime|c733ee02-fa94-4a0c-96ec-b4ab07c331b6]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/cli_components/utils.py", line 69, in invoke
+[MFLOG|0|2025-04-17T20:08:10.814064Z|runtime|6c6688fd-7b4a-41ad-8a1f-f9112acc45a9]    return _process_result(sub_ctx.command.invoke(sub_ctx))
+[MFLOG|0|2025-04-17T20:08:10.814083Z|runtime|26739656-f7d3-4674-9dfc-790561f54f6b]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:08:10.814107Z|runtime|5d894a93-77b2-493d-b052-113cd3c158f4]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 1066, in invoke
+[MFLOG|0|2025-04-17T20:08:10.814126Z|runtime|c338dc11-690d-4981-b907-8ae468f232fa]    return ctx.invoke(self.callback, ctx.params)
+[MFLOG|0|2025-04-17T20:08:10.814147Z|runtime|13b66590-c83c-4865-bbaa-7dcd2f8a66c8]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:08:10.814167Z|runtime|a0d9b376-8c5c-4a93-9535-890468887c23]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 610, in invoke
+[MFLOG|0|2025-04-17T20:08:10.814186Z|runtime|321ab65e-ae21-4a6f-bff9-f137c505ca27]    return callback(args, kwargs)
+[MFLOG|0|2025-04-17T20:08:10.814205Z|runtime|b008adc8-6db4-4e25-9959-6ef7b317411f]           ^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:08:10.814223Z|runtime|7dfa36bf-132a-4d54-983d-941a8f86902f]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/tracing/__init__.py", line 27, in wrapper_func
+[MFLOG|0|2025-04-17T20:08:10.814242Z|runtime|c8df0739-01ee-4e8e-b76d-2f5cd36a73d1]    return func(args, kwargs)
+[MFLOG|0|2025-04-17T20:08:10.814261Z|runtime|30bdbcb6-b9d0-425c-b1cd-973b7198f3e9]           ^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:08:10.814279Z|runtime|71eb35e5-7e06-4e60-b896-dedff61da220]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/_vendor/click/decorators.py", line 21, in new_func
+[MFLOG|0|2025-04-17T20:08:10.814302Z|runtime|23055cfd-f3df-421c-9630-b8651a5aca87]    return f(get_current_context(), args, kwargs)
+[MFLOG|0|2025-04-17T20:08:10.814320Z|runtime|a539e3cc-2a68-4644-a2f9-602dab8e848f]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:08:10.814339Z|runtime|804add01-49ec-48a6-bc7c-271eeb3af5fe]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/cli_components/step_cmd.py", line 167, in step
+[MFLOG|0|2025-04-17T20:08:10.814356Z|runtime|2142263c-615b-4abe-8b78-ccb245f60901]    task.run_step(
+[MFLOG|0|2025-04-17T20:08:10.814376Z|runtime|6beb5c49-5e1d-48ac-b64f-9f14dfde2b9e]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/task.py", line 672, in run_step
+[MFLOG|0|2025-04-17T20:08:10.814393Z|runtime|df011c06-2e7a-438e-8c29-77629e8d0f48]    self._exec_step_function(step_func)
+[MFLOG|0|2025-04-17T20:08:10.814411Z|runtime|c3ac73b9-5208-481a-9323-abd070a06abb]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/task.py", line 62, in _exec_step_function
+[MFLOG|0|2025-04-17T20:08:10.814430Z|runtime|038d4d5a-63b3-4a72-9373-82b9617d8b45]    step_function()
+[MFLOG|0|2025-04-17T20:08:10.814448Z|runtime|68b3e36b-d757-4764-a610-1157879f74b3]  File "/Users/jahnavipaliwal/Desktop/ML_Ops/MLOps/Labs/Lab6/src/scoring.py", line 27, in predict
+[MFLOG|0|2025-04-17T20:08:10.814467Z|runtime|d1597960-2f7b-43dd-a0e6-5acb8bde1478]    self.predictions = self.model.predict(self.X_new)
+[MFLOG|0|2025-04-17T20:08:10.814485Z|runtime|c1e3a7ff-2d72-44ac-bb6c-257caad17f22]                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:08:10.814502Z|runtime|3f1d3003-9d69-4237-8bbe-2443a2816def]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/sklearn/ensemble/_forest.py", line 1063, in predict
+[MFLOG|0|2025-04-17T20:08:10.814520Z|runtime|f98bbe1d-b0f2-478c-8fd7-b17b264e6b91]    X = self._validate_X_predict(X)
+[MFLOG|0|2025-04-17T20:08:10.814538Z|runtime|43c9fcea-35c2-4359-abaa-345bc916da78]        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:08:10.814555Z|runtime|47ffabcb-ec97-4b91-8259-b9ba691bf68c]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/sklearn/ensemble/_forest.py", line 641, in _validate_X_predict
+[MFLOG|0|2025-04-17T20:08:10.814572Z|runtime|9a4a18d9-e9ee-4491-a772-44f36fb7b003]    X = self._validate_data(
+[MFLOG|0|2025-04-17T20:08:10.814590Z|runtime|00961474-48cc-46e8-a37a-a76709bee725]        ^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:08:10.814610Z|runtime|6c2ed79d-4224-4ec3-9d71-0d73af962995]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/sklearn/base.py", line 633, in _validate_data
+[MFLOG|0|2025-04-17T20:08:10.814628Z|runtime|5bc176f8-2d34-44a1-9c33-4f8d6c7a6b30]    out = check_array(X, input_name="X", check_params)
+[MFLOG|0|2025-04-17T20:08:10.814646Z|runtime|9057b540-2843-4a2e-9b9f-cfcf07a683a0]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:08:10.814662Z|runtime|533862a0-a9ab-45b0-abdf-a611c6c562d7]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/sklearn/utils/validation.py", line 971, in check_array
+[MFLOG|0|2025-04-17T20:08:10.814679Z|runtime|cfae5223-9ef2-482b-b97f-9dc653ac5603]    array = _ensure_sparse_format(
+[MFLOG|0|2025-04-17T20:08:10.814697Z|runtime|edfd88ca-641e-410b-8aa7-f57ced7d0e8b]            ^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:08:10.814716Z|runtime|fb0770da-65f0-44b3-8991-ff5ed790a520]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/sklearn/utils/validation.py", line 631, in _ensure_sparse_format
+[MFLOG|0|2025-04-17T20:08:10.814733Z|runtime|382a98ed-2c73-4227-8142-e0d765c41358]    _assert_all_finite(
+[MFLOG|0|2025-04-17T20:08:10.814751Z|runtime|73c8931b-732a-481b-9d76-3aef039fee0a]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/sklearn/utils/validation.py", line 123, in _assert_all_finite
+[MFLOG|0|2025-04-17T20:08:10.814769Z|runtime|f45eb9af-284d-494c-9f4c-daefafc1b484]    _assert_all_finite_element_wise(
+[MFLOG|0|2025-04-17T20:08:10.814787Z|runtime|c981b8fc-3ad4-427f-bdcf-42346d365c1f]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/sklearn/utils/validation.py", line 172, in _assert_all_finite_element_wise
+[MFLOG|0|2025-04-17T20:08:10.814805Z|runtime|95197663-38e7-4c5d-b4a3-494122ae49ce]    raise ValueError(msg_err)
+[MFLOG|0|2025-04-17T20:08:10.814822Z|runtime|ccd81188-db05-493b-98ec-38d585f72ad5]ValueError: Input X contains NaN.
+[MFLOG|0|2025-04-17T20:08:10.814840Z|runtime|d3063096-73c9-4429-93a9-bac544dffff2]RandomForestRegressor does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+[MFLOG|0|2025-04-17T20:08:10.814867Z|runtime|ce4d00e2-ec1a-4b28-9ff3-bb25796f4670]
+[MFLOG|0|2025-04-17T20:08:10.815196Z|runtime|83596210-80db-4b89-a80a-87a999ab0424]Task failed.

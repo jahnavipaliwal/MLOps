@@ -1,0 +1,1 @@
+{"run_number": "1744916250290648", "step_name": "process_data", "task_id": "2", "flow_id": "ScoringFlow", "user_name": "jahnavipaliwal", "tags": [], "system_tags": ["python_version:3.12.9", "metaflow_version:2.15.7", "user:jahnavipaliwal", "runtime:dev"], "ts_epoch": 1744916251510}

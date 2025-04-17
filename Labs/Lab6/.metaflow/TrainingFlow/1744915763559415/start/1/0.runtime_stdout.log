@@ -1,0 +1,23 @@
+[MFLOG|0|2025-04-17T18:49:24.708947Z|runtime|2c4d8861-8a6f-4285-8df7-80c60e70eb54]Data Sample:
+[MFLOG|0|2025-04-17T18:49:24.713685Z|runtime|47519963-7b54-4808-85d1-9c8f07dae292]   id         Brand Material  ...  Color  Weight Capacity (kg)      Price
+[MFLOG|0|2025-04-17T18:49:24.713849Z|runtime|09b60de7-6596-404a-8a27-1dad7f4bb239]0   0      Jansport  Leather  ...  Black             11.611723  112.15875
+[MFLOG|0|2025-04-17T18:49:24.713878Z|runtime|8b6fedc9-5d41-4912-9657-6de0d57896de]1   1      Jansport   Canvas  ...  Green             27.078537   68.88056
+[MFLOG|0|2025-04-17T18:49:24.713908Z|runtime|fb3c07c4-420b-4297-949a-9f63a3ce118f]2   2  Under Armour  Leather  ...    Red             16.643760   39.17320
+[MFLOG|0|2025-04-17T18:49:24.713936Z|runtime|bf92d0be-45e0-441b-8492-c2ffc05258c2]3   3          Nike    Nylon  ...  Green             12.937220   80.60793
+[MFLOG|0|2025-04-17T18:49:24.713960Z|runtime|496033e1-1f4a-49fd-8803-4f94dc200d1f]4   4        Adidas   Canvas  ...  Green             17.749338   86.02312
+[MFLOG|0|2025-04-17T18:49:24.713987Z|runtime|04bd9245-8963-4520-9acf-54eb8bc539ff]
+[MFLOG|0|2025-04-17T18:49:24.714009Z|runtime|08199563-dd51-42e6-95da-26b1a39f0ab9][5 rows x 11 columns]
+[MFLOG|0|2025-04-17T18:49:24.714036Z|runtime|8f2a7394-a364-44ee-91cc-d6a3d0970210]
+[MFLOG|0|2025-04-17T18:49:24.714073Z|runtime|5769e46e-4362-4432-93c7-b7cffc18fc5b]Data Types:
+[MFLOG|0|2025-04-17T18:49:24.717346Z|runtime|0b8cd4cb-3f21-41e8-9719-afab9c92add8]id                        int64
+[MFLOG|0|2025-04-17T18:49:24.858353Z|runtime|300475b3-d7ae-48bd-a5a2-6f2dde5baeac]Brand                    object
+[MFLOG|0|2025-04-17T18:49:24.858470Z|runtime|856046b0-f4e9-43e8-b539-be1a98d4c8db]Material                 object
+[MFLOG|0|2025-04-17T18:49:24.858505Z|runtime|cb2acafe-e223-4c54-80ef-9b96afc58868]Size                     object
+[MFLOG|0|2025-04-17T18:49:24.858533Z|runtime|cc61fa0e-9dd3-46e2-8704-2111821a7425]Compartments            float64
+[MFLOG|0|2025-04-17T18:49:24.858557Z|runtime|e8f16368-a212-4a50-a824-c1084fff70ce]Laptop Compartment       object
+[MFLOG|0|2025-04-17T18:49:24.858576Z|runtime|2ab6b726-0043-4214-82d2-058126dc27b1]Waterproof               object
+[MFLOG|0|2025-04-17T18:49:24.858598Z|runtime|d0996893-87a7-477a-9450-6801f6f8319a]Style                    object
+[MFLOG|0|2025-04-17T18:49:24.858650Z|runtime|e8b4ca5a-5ee8-4dfa-95ab-ea5e8289b10e]Color                    object
+[MFLOG|0|2025-04-17T18:49:24.858669Z|runtime|a7d8958c-ba59-4a39-8d4e-d4d5f497f53f]Weight Capacity (kg)    float64
+[MFLOG|0|2025-04-17T18:49:24.858686Z|runtime|f67da1e0-acf2-4b58-a92f-50bb5bbac7e1]Price                   float64
+[MFLOG|0|2025-04-17T18:49:24.858702Z|runtime|c3adae06-f68b-4b28-acce-c8a219ca42be]dtype: object

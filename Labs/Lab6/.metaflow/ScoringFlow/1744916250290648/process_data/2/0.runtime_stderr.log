@@ -1,0 +1,52 @@
+[MFLOG|0|2025-04-17T18:57:32.416012Z|runtime|6dcbe3bf-b9de-447d-ac2d-df4a06719407]<flow ScoringFlow step process_data> failed:
+[MFLOG|0|2025-04-17T18:57:32.551706Z|runtime|ced03fdb-d39c-4435-883f-ccac3c961013]    Internal error
+[MFLOG|0|2025-04-17T18:57:32.552619Z|runtime|af9fda3d-9597-418a-8616-98c5a1dd3123]Traceback (most recent call last):
+[MFLOG|0|2025-04-17T18:57:32.552663Z|runtime|adb9de52-0421-41ad-89b8-c072aaaa6191]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/cli.py", line 611, in main
+[MFLOG|0|2025-04-17T18:57:32.552692Z|runtime|ff1df3df-b445-44c6-ba9a-0c6f241281e7]    start(auto_envvar_prefix="METAFLOW", obj=state)
+[MFLOG|0|2025-04-17T18:57:32.552719Z|runtime|e31dd7eb-71cd-4900-8026-c583dec8b7d7]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 829, in __call__
+[MFLOG|0|2025-04-17T18:57:32.552750Z|runtime|3adb3444-5af9-4ee8-916c-d927b83408c8]    return self.main(args, kwargs)
+[MFLOG|0|2025-04-17T18:57:32.657371Z|runtime|2e0cb966-08fe-499b-99e7-9caec8f5d37f]           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T18:57:32.657476Z|runtime|0d3ad115-b51e-4f26-9408-aed148f96f1c]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 782, in main
+[MFLOG|0|2025-04-17T18:57:32.657506Z|runtime|ae5f8138-f17c-4648-93cf-aed4a3abb64c]    rv = self.invoke(ctx)
+[MFLOG|0|2025-04-17T18:57:32.657524Z|runtime|214d4c05-e2c3-4507-ab52-b22f0009fa3a]         ^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T18:57:32.657545Z|runtime|3474277c-9964-4c29-a6e1-ee7e904ee655]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/cli_components/utils.py", line 69, in invoke
+[MFLOG|0|2025-04-17T18:57:32.657563Z|runtime|c88ec68d-0cef-4007-9e43-f1861da5debc]    return _process_result(sub_ctx.command.invoke(sub_ctx))
+[MFLOG|0|2025-04-17T18:57:32.657584Z|runtime|f0964ae7-85a2-43a0-bc3a-6def60aaea38]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T18:57:32.657608Z|runtime|d7d8366c-0bd9-4c94-9fdd-636e8a121091]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 1066, in invoke
+[MFLOG|0|2025-04-17T18:57:32.657627Z|runtime|8bab2302-3586-47c1-9149-5bb5a6150ed3]    return ctx.invoke(self.callback, ctx.params)
+[MFLOG|0|2025-04-17T18:57:32.657648Z|runtime|5d9f036b-aeef-4d9f-ae21-c36d613a1c05]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T18:57:32.657666Z|runtime|23b398fe-f10c-4f09-8771-563cad87fc71]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 610, in invoke
+[MFLOG|0|2025-04-17T18:57:32.657684Z|runtime|f210ebbc-2762-4d00-8dbc-0063e5ca1ea5]    return callback(args, kwargs)
+[MFLOG|0|2025-04-17T18:57:32.657703Z|runtime|516d3c15-11c5-4e09-b0d0-6b11576afb8d]           ^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T18:57:32.657724Z|runtime|6251f2b0-2f36-4040-98c1-25e8bedf6a21]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/tracing/__init__.py", line 27, in wrapper_func
+[MFLOG|0|2025-04-17T18:57:32.657742Z|runtime|846f0f9e-1d95-4a2b-8131-07a33c37db35]    return func(args, kwargs)
+[MFLOG|0|2025-04-17T18:57:32.657761Z|runtime|dc8f7673-872d-4751-af94-18a1bafb841f]           ^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T18:57:32.657782Z|runtime|402e673b-94cb-4422-913a-06b5c54f42b9]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/_vendor/click/decorators.py", line 21, in new_func
+[MFLOG|0|2025-04-17T18:57:32.657800Z|runtime|465e504f-5e39-45a5-84d1-256379501e99]    return f(get_current_context(), args, kwargs)
+[MFLOG|0|2025-04-17T18:57:32.657824Z|runtime|7cd7187a-95a6-49e9-a178-dbcf894e6450]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T18:57:32.657842Z|runtime|aba73b1e-3d88-4b1c-8ede-9d146e8595e4]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/cli_components/step_cmd.py", line 167, in step
+[MFLOG|0|2025-04-17T18:57:32.657862Z|runtime|a35a2d65-ea13-4fe8-8f88-b7c8a1cab153]    task.run_step(
+[MFLOG|0|2025-04-17T18:57:32.657880Z|runtime|972827fd-9b4e-436e-9183-004019ac63a2]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/task.py", line 672, in run_step
+[MFLOG|0|2025-04-17T18:57:32.657898Z|runtime|087ce02a-ecc3-4b40-be18-05dc09aa533d]    self._exec_step_function(step_func)
+[MFLOG|0|2025-04-17T18:57:32.657915Z|runtime|27f7b20c-d5b5-4681-b2ac-89126fd45da1]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/task.py", line 62, in _exec_step_function
+[MFLOG|0|2025-04-17T18:57:32.657933Z|runtime|24fd1b53-1cf0-4003-a2f4-b60420be76e3]    step_function()
+[MFLOG|0|2025-04-17T18:57:32.657951Z|runtime|767aa6f4-138c-4b3b-a5f1-c11e50f5310c]  File "/Users/jahnavipaliwal/Desktop/ML_Ops/MLOps/Labs/Lab6/src/scoring.py", line 15, in process_data
+[MFLOG|0|2025-04-17T18:57:32.657969Z|runtime|bf7aa5e6-aa48-4658-849f-52ad41d34b90]    self.X_new, _ = dataprocessing.feature_transform(self.df_new)
+[MFLOG|0|2025-04-17T18:57:32.657986Z|runtime|dc25b4dd-7f2e-4ee4-838c-7fbd6415cc84]                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T18:57:32.658004Z|runtime|5d9c6e31-f943-4def-b2d1-7dc6e3f02562]  File "/Users/jahnavipaliwal/Desktop/ML_Ops/MLOps/Labs/Lab6/src/dataprocessing.py", line 13, in feature_transform
+[MFLOG|0|2025-04-17T18:57:32.658020Z|runtime|903207f4-2ef8-402a-be95-f0da0ccd3dd1]    X = df.drop("Price", axis=1)
+[MFLOG|0|2025-04-17T18:57:32.658038Z|runtime|1772b532-5e61-4b79-8477-637137dd6c58]        ^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T18:57:32.658055Z|runtime|89220859-e057-4d29-bc8d-b3b4a4e3709d]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/pandas/core/frame.py", line 5581, in drop
+[MFLOG|0|2025-04-17T18:57:32.658072Z|runtime|c916160f-e518-4eab-9f3e-1c20869a2bde]    return super().drop(
+[MFLOG|0|2025-04-17T18:57:32.658090Z|runtime|2c0437dc-1ece-4796-bce0-f936a3a1167c]           ^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T18:57:32.658107Z|runtime|ebf544de-ac6f-44ff-9742-72b3185fbea8]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/pandas/core/generic.py", line 4788, in drop
+[MFLOG|0|2025-04-17T18:57:32.658125Z|runtime|2ecc19dc-b85f-4114-94d1-fd6c97edcd0f]    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+[MFLOG|0|2025-04-17T18:57:32.658142Z|runtime|e554a84f-f549-40b7-81b8-264956bf13b3]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T18:57:32.658158Z|runtime|d3fc9cac-9725-4d7a-ae35-0e4169e7412b]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/pandas/core/generic.py", line 4830, in _drop_axis
+[MFLOG|0|2025-04-17T18:57:32.658175Z|runtime|2088be73-05af-448b-a49b-310a9f8f0697]    new_axis = axis.drop(labels, errors=errors)
+[MFLOG|0|2025-04-17T18:57:32.658192Z|runtime|d99efec5-e67a-480d-8693-f5f290fef829]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T18:57:32.658209Z|runtime|e41f6784-cd61-485c-86e1-13f29d811829]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 7070, in drop
+[MFLOG|0|2025-04-17T18:57:32.658225Z|runtime|a9392732-2386-417a-862e-4ef69104e234]    raise KeyError(f"{labels[mask].tolist()} not found in axis")
+[MFLOG|0|2025-04-17T18:57:32.658242Z|runtime|04416445-5a3c-44e9-ba91-6598f58a6db1]KeyError: "['Price'] not found in axis"
+[MFLOG|0|2025-04-17T18:57:32.658260Z|runtime|5e6c4251-7aa1-4f21-8816-a1234f61c500]
+[MFLOG|0|2025-04-17T18:57:32.658582Z|runtime|775ceaf0-3b60-45a7-b9a2-9bd51d88b96e]Task failed.

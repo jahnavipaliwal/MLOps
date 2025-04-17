@@ -1,0 +1,52 @@
+[MFLOG|0|2025-04-17T20:11:10.637864Z|runtime|96d0cc4b-97a5-4468-831f-1c708c268296]<flow ScoringFlow step output_predictions> failed:
+[MFLOG|0|2025-04-17T20:11:10.642107Z|runtime|5d75a170-5bab-4f1a-a0e1-1846c82aef96]    Internal error
+[MFLOG|0|2025-04-17T20:11:10.644013Z|runtime|53c5ca37-519d-44e6-963d-960fb880b147]Traceback (most recent call last):
+[MFLOG|0|2025-04-17T20:11:10.644076Z|runtime|12c2a070-3872-4587-baa0-3632daa31fcf]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/cli.py", line 611, in main
+[MFLOG|0|2025-04-17T20:11:10.644109Z|runtime|995a170e-20d5-4069-b729-3c4db84e7584]    start(auto_envvar_prefix="METAFLOW", obj=state)
+[MFLOG|0|2025-04-17T20:11:10.644134Z|runtime|517b16ff-45df-4c0a-a95e-6da6ebe77093]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 829, in __call__
+[MFLOG|0|2025-04-17T20:11:10.644163Z|runtime|caa34457-e80e-4bbb-8f77-2d42eb7f8649]    return self.main(args, kwargs)
+[MFLOG|0|2025-04-17T20:11:10.756664Z|runtime|11638eab-cb4f-4700-9860-d710ed1c07fd]           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:11:10.756806Z|runtime|74f90c7b-3ce2-486e-a87b-7621ca1f7063]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 782, in main
+[MFLOG|0|2025-04-17T20:11:10.756843Z|runtime|310b2816-a726-4cd6-af7c-4d7632723c79]    rv = self.invoke(ctx)
+[MFLOG|0|2025-04-17T20:11:10.756863Z|runtime|b0f009e0-748f-47e9-9dc2-cf9b8c321f42]         ^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:11:10.756884Z|runtime|d5ff0e75-3f98-4d83-802a-1f0639052b7d]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/cli_components/utils.py", line 69, in invoke
+[MFLOG|0|2025-04-17T20:11:10.756908Z|runtime|a9a596ec-91cb-4fb7-b634-1227bd660955]    return _process_result(sub_ctx.command.invoke(sub_ctx))
+[MFLOG|0|2025-04-17T20:11:10.756935Z|runtime|a399f71d-c330-43e4-ad18-748f5ee8ecf0]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:11:10.756964Z|runtime|dc28af98-7ace-47ce-9f46-c0e76a602f33]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 1066, in invoke
+[MFLOG|0|2025-04-17T20:11:10.756986Z|runtime|9367ebdf-7743-46ac-94bd-71c85e3d41bd]    return ctx.invoke(self.callback, ctx.params)
+[MFLOG|0|2025-04-17T20:11:10.757006Z|runtime|00addcdb-13c3-454a-b835-63c43f6491e6]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:11:10.757025Z|runtime|7753e23d-85a1-4bf8-91f9-0a4b7f105960]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 610, in invoke
+[MFLOG|0|2025-04-17T20:11:10.757044Z|runtime|df842039-ac01-4135-a6e5-7e07ff1e777d]    return callback(args, kwargs)
+[MFLOG|0|2025-04-17T20:11:10.757062Z|runtime|42541d82-fae9-4291-95ef-8f591efe82d2]           ^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:11:10.757080Z|runtime|9f1b6fa9-b5e6-46d4-b0d8-c6d86c199ba3]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/tracing/__init__.py", line 27, in wrapper_func
+[MFLOG|0|2025-04-17T20:11:10.757098Z|runtime|4efcc47e-fa3e-4aa7-95e6-3f7b866bc6af]    return func(args, kwargs)
+[MFLOG|0|2025-04-17T20:11:10.757116Z|runtime|d6534262-a231-4e7a-87bb-380f29910d0c]           ^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:11:10.757158Z|runtime|1e354f19-a6f7-4822-a675-72a905ee0cb6]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/_vendor/click/decorators.py", line 21, in new_func
+[MFLOG|0|2025-04-17T20:11:10.757180Z|runtime|d8d421a8-2350-4f80-830c-3013ee8510f8]    return f(get_current_context(), args, kwargs)
+[MFLOG|0|2025-04-17T20:11:10.757198Z|runtime|0e5123af-22a3-4d60-a8d7-b843019685de]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:11:10.757218Z|runtime|1e4594ed-7f5f-4fe5-ba68-6b4a6f84c463]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/cli_components/step_cmd.py", line 167, in step
+[MFLOG|0|2025-04-17T20:11:10.757236Z|runtime|7398f670-9f3b-4cc4-8b50-91f696eeaf46]    task.run_step(
+[MFLOG|0|2025-04-17T20:11:10.757256Z|runtime|6ffef280-c018-4f87-987c-75349043f830]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/task.py", line 672, in run_step
+[MFLOG|0|2025-04-17T20:11:10.757275Z|runtime|f923e6ab-229d-4f2b-a547-f1cf4a3da70a]    self._exec_step_function(step_func)
+[MFLOG|0|2025-04-17T20:11:10.757295Z|runtime|7a10bf59-a23e-43cc-a3fd-01d6f34560e6]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/metaflow/task.py", line 62, in _exec_step_function
+[MFLOG|0|2025-04-17T20:11:10.757316Z|runtime|bd381291-8424-4508-8e1e-b63b0987aeaa]    step_function()
+[MFLOG|0|2025-04-17T20:11:10.757334Z|runtime|44f5c032-cd1e-4698-acc6-177f2130b560]  File "/Users/jahnavipaliwal/Desktop/ML_Ops/MLOps/Labs/Lab6/src/scoring.py", line 33, in output_predictions
+[MFLOG|0|2025-04-17T20:11:10.757352Z|runtime|abae98a1-f214-4b22-a4ed-2b9007743879]    results_df.to_csv('data/processed/predictions.csv', index=False)
+[MFLOG|0|2025-04-17T20:11:10.757374Z|runtime|22229693-5273-44d2-956c-9b1902f97498]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+[MFLOG|0|2025-04-17T20:11:10.757392Z|runtime|fa33058e-cdea-4dd8-b9ab-a6fce4a0a93d]    return func(args, kwargs)
+[MFLOG|0|2025-04-17T20:11:10.757410Z|runtime|acb13aec-08a3-4b1a-834d-05da4c0c4d09]           ^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:11:10.757426Z|runtime|e33d86fa-2bae-4380-af50-c91a19157cc2]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/pandas/core/generic.py", line 3967, in to_csv
+[MFLOG|0|2025-04-17T20:11:10.757444Z|runtime|f524e7dc-87d1-42b5-9d2b-9a56709d5b2c]    return DataFrameRenderer(formatter).to_csv(
+[MFLOG|0|2025-04-17T20:11:10.757461Z|runtime|ea285fcb-5fac-4cdf-b131-3a9f32db81ce]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:11:10.757481Z|runtime|4cfe7c0c-84a1-4177-b5b5-9ddbb526427f]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/pandas/io/formats/format.py", line 1014, in to_csv
+[MFLOG|0|2025-04-17T20:11:10.757500Z|runtime|5f97a783-feb9-4f7c-865c-a96be1f911e3]    csv_formatter.save()
+[MFLOG|0|2025-04-17T20:11:10.757517Z|runtime|176bbd4f-55d9-43e1-aebe-bccf239054d6]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/pandas/io/formats/csvs.py", line 251, in save
+[MFLOG|0|2025-04-17T20:11:10.757534Z|runtime|0920d5ff-243c-4be6-8d31-724e63ad195b]    with get_handle(
+[MFLOG|0|2025-04-17T20:11:10.757552Z|runtime|0bc84ca0-da9a-49e2-a551-81819ff9ea41]         ^^^^^^^^^^^
+[MFLOG|0|2025-04-17T20:11:10.757571Z|runtime|71908c78-7818-4b9e-b6f3-1e5e0354ae7e]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/pandas/io/common.py", line 749, in get_handle
+[MFLOG|0|2025-04-17T20:11:10.757589Z|runtime|93d6ab6a-e0d3-4cee-ad20-4abb5c4bfa66]    check_parent_directory(str(handle))
+[MFLOG|0|2025-04-17T20:11:10.757607Z|runtime|5b1f3c1c-712b-43d5-b136-9a21d51d4194]  File "/opt/anaconda3/envs/mlops/lib/python3.12/site-packages/pandas/io/common.py", line 616, in check_parent_directory
+[MFLOG|0|2025-04-17T20:11:10.757624Z|runtime|9031546f-03d9-4808-a316-48fc24427114]    raise OSError(rf"Cannot save file into a non-existent directory: '{parent}'")
+[MFLOG|0|2025-04-17T20:11:10.757642Z|runtime|bd0d9641-779e-46af-8664-6fe5c307e021]OSError: Cannot save file into a non-existent directory: 'data/processed'
+[MFLOG|0|2025-04-17T20:11:10.757660Z|runtime|f80f5858-725b-468a-a13d-54a5227c468d]
+[MFLOG|0|2025-04-17T20:11:10.757976Z|runtime|36ba5b36-b6b8-42a7-ae77-a25c7970cad8]Task failed.
