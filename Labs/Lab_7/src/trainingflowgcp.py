@@ -62,7 +62,7 @@ class TrainingFlow(FlowSpec):
     @timeout(seconds=180)
     @step
     def register_model(self):
-        mlflow.set_tracking_uri("http://127.0.0.1:5000")
+        mlflow.set_tracking_uri("https://mlops-service-170447928124.us-west2.run.app")
         mlflow.set_experiment("Bagpack_Model_Training")
 
         with mlflow.start_run():
