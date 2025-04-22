@@ -53,7 +53,7 @@ class ScoringFlowGCP(FlowSpec):
     @step
     def output_predictions(self):
         results_df = pd.DataFrame(self.predictions, columns=['prediction'])
-        results_df.to_csv('../../data/predictions_lab6.csv', index=False)
+        results_df.to_csv("gs://test-gcplab7-457522/data/predictions_lab6.csv", index=False)
         print("Predictions saved successfully.")
         self.next(self.end)
 
