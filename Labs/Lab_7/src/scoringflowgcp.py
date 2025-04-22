@@ -18,7 +18,7 @@ class ScoringFlowGCP(FlowSpec):
 
     @step
     def start(self):
-        self.df_new = pd.read_csv('../../data/bagpack/test.csv')
+        self.df_new = pd.read_csv("gs://test-gcplab7-457522/data/test.csv")
         self.next(self.process_data)
 
     @catch(var="error")
@@ -35,7 +35,7 @@ class ScoringFlowGCP(FlowSpec):
     @timeout(seconds=600)
     @step
     def load_model(self):
-        mlflow.set_tracking_uri("http://127.0.0.1:5000")  # Replace if MLflow is remote
+        mlflow.set_tracking_uri("http://34.94.191.167")
         model_uri = "models:/BagpackBestModel/latest"
         self.model = mlflow.sklearn.load_model(model_uri)
         self.next(self.predict)
