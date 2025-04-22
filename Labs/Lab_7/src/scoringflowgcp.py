@@ -10,7 +10,10 @@ from sklearn.pipeline import Pipeline
     libraries={
         "pandas": "1.5.3",
         "scikit-learn": "1.2.2",
-        "mlflow": "2.3.2"
+        "mlflow": "2.3.2",
+        "databricks-cli": "0.17.6",  
+        "fsspec": "2023.6.0",        
+        "gcsfs": "2023.6.0"          
     },
     python="3.9.16"
 )
@@ -55,7 +58,6 @@ class ScoringFlowGCP(FlowSpec):
         self.next(self.end)
 
     def feature_transform(self, df):
-        # Drop ID as it's not useful
         df = df.drop(columns=["id"])
 
         if "Price" in df.columns:
@@ -65,14 +67,12 @@ class ScoringFlowGCP(FlowSpec):
             X = df
             y = None
 
-        # Identify numeric and categorical columns
         numeric_features = ["Compartments", "Weight Capacity (kg)"]
         categorical_features = ["Brand", "Material", "Size", "Laptop Compartment", "Waterproof", "Style", "Color"]
 
-        # Preprocessing pipelines
         numeric_transformer = Pipeline(steps=[
-        ('imputer', SimpleImputer(strategy='mean')),
-        ('scaler', StandardScaler())
+            ('imputer', SimpleImputer(strategy='mean')),
+            ('scaler', StandardScaler())
         ])
 
         categorical_transformer = Pipeline(steps=[
@@ -87,9 +87,7 @@ class ScoringFlowGCP(FlowSpec):
             ]
         )
 
-        # Fit and transform
         X_processed = preprocessor.fit_transform(X)
-
         return X_processed, y
 
     @step
