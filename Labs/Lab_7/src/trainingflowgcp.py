@@ -25,7 +25,7 @@ class TrainingFlow(FlowSpec):
 
     @step
     def start(self):
-        self.df = pd.read_csv("gs://storage-my-ds-lab-metaflow-default/data/train.csv")
+        self.df = pd.read_csv("gs://test-gcplab7-457522/data/train.csv")
         self.df = self.df.dropna()
         print("Data Sample:")
         print(self.df.head())
@@ -35,17 +35,17 @@ class TrainingFlow(FlowSpec):
 
     @catch(var="error")
     @retry(times=2)
-    @timeout(seconds=300)
+    @timeout(seconds=3000)
     @step
     def process_data(self):
         # Modular data processing step
         self.X, self.y = self.feature_transform(self.df)
         self.next(self.tune_model)
 
-    @kubernetes(cpu=2, memory=4000)
-    @resources(cpu=2, memory=4000)
+    @kubernetes(cpu=2, memory=8000)
+    @resources(cpu=2, memory=8000)
     @retry(times=3)
-    @timeout(seconds=600)
+    @timeout(seconds=6000)
     @step
     def tune_model(self):
         # Hyperparameter tuning
@@ -62,7 +62,7 @@ class TrainingFlow(FlowSpec):
     @timeout(seconds=180)
     @step
     def register_model(self):
-        mlflow.set_tracking_uri("https://mlops-service-170447928124.us-west2.run.app")
+        mlflow.set_tracking_uri("http://34.94.191.167")
         mlflow.set_experiment("Bagpack_Model_Training")
 
         with mlflow.start_run():
